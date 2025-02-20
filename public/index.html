@@ -16,10 +16,10 @@
     <!-- font icons -->
     <link
       rel="stylesheet"
-      href="/public_html/assets/vendors/themify-icons/css/themify-icons.css"
+      href="/public/assets/vendors/themify-icons/css/themify-icons.css"
     />
     <!-- Bootstrap + Meyawo main styles -->
-    <link rel="stylesheet" href="/public_html/assets/css/meyawo.css" />
+    <link rel="stylesheet" href="/public/assets/css/meyawo.css" />
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     <!-- Page Navbar -->
@@ -167,7 +167,7 @@
           <div class="col-md-4">
             <div class="portfolio-card">
               <img
-                src="/public_html/assets/imgs/diabetes_checker_icon.png"
+                src="/public/assets/imgs/diabetes_checker_icon.png"
                 class="portfolio-card-img"
                 alt="Diabetes Checker"
               />
@@ -194,7 +194,7 @@
           <div class="col-md-4">
             <div class="portfolio-card">
               <img
-                src="/public_html/assets/imgs/blogsite_icon.png"
+                src="/public/assets/imgs/blogsite_icon.png"
                 class="portfolio-card-img"
                 alt="Blog Site"
               />
@@ -221,7 +221,7 @@
           <div class="col-md-4">
             <div class="portfolio-card">
               <img
-                src="/public_html/assets/imgs/Real-Time-Chat.png"
+                src="/public/assets/imgs/Real-Time-Chat.png"
                 class="portfolio-card-img"
                 alt="Real-Time-Chat"
               />
@@ -265,7 +265,8 @@
         <p class="section-subtitle">How can you communicate?</p>
         <h6 class="section-title mb-5">Contact Me</h6>
         <!-- contact form -->
-        <form id="contactForm"
+        <form
+          id="contactForm"
           class="contact-form col-md-10 col-lg-8 m-auto"
           enctype="text/plain"
         >
@@ -345,32 +346,36 @@
 
     <!-- core  -->
     <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
           event.preventDefault();
-      
+
           let name = document.getElementById("name").value.trim();
           let email = document.getElementById("email").value.trim();
           let message = document.getElementById("message").value.trim();
-          
+
           if (name === "" || email === "" || message === "") {
-              alert("Please fill out all fields.");
-              return;
+            alert("Please fill out all fields.");
+            return;
           }
-      
+
           let recipient = "abhirai5031k@gmail.com"; // Replace with your email
           let subject = `New Contact Form Submission from ${name}`;
           let body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
-      
-          window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      });
+
+          window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(
+            subject
+          )}&body=${encodeURIComponent(body)}`;
+        });
     </script>
-    <script src="/public_html/assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="/public_html/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="/public/assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="/public/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 
     <!-- bootstrap 3 affix -->
-    <script src="/public_html/assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="/public/assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
     <!-- Meyawo js -->
-    <script src="/public_html/assets/js/meyawo.js"></script>
+    <script src="/public/assets/js/meyawo.js"></script>
   </body>
 </html>
